@@ -17,13 +17,18 @@ public class Lab03Task3A {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         // TODO code application logic here
-        int lower=1,upper=1000;
-        System.out.println("two Random numbers from "+lower+" to "+upper+":");
-        for(int i =1;i<=2;i++){
-        int randomNumber = (int)(lower+ Math.random() * (upper - lower + 1) );
-      System.out.println(randomNumber);
+        int  upper=1;
+        
+       int lower = (int)(1+ Math.random() * (1000 - 1) + 1) ;
+            while(lower>999){
+        
+                lower = (int)(1+ Math.random() * (1000 - 1 )+ 1) ;
+            } while(lower>=upper){
+                 upper = (int)(1+ Math.random() * (1000 - 1) + 1) ;
+            }
+      System.out.println("Random number from 1 to 10000 :     lower "+lower +" upper"   +upper+":");
     }
         
     }
-}
+
 
