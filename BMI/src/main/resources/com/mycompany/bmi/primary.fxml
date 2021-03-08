@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="523.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.bmi.PrimaryController">
+   <children>
+      <GridPane layoutX="55.0" layoutY="11.0" prefHeight="488.0" prefWidth="841.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="11.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="475.0" minWidth="10.0" prefWidth="373.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="424.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane minWidth="-Infinity" prefHeight="480.0" prefWidth="419.0" style="-fx-background-color: #DDA0DD;">
+               <children>
+                  <ImageView fitHeight="225.0" fitWidth="377.0" layoutX="53.0" layoutY="14.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="S_RESIZE" />
+                     </cursor>
+                     <effect>
+                        <Reflection fraction="0.93" topOpacity="0.24" />
+                     </effect>
+                     <image>
+                        <Image url="@d7b907b04aa80e30bd6b83084fc13e23.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#0000cdd1" layoutX="53.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aim for a healthy diet" wrappingWidth="275.271151214838">
+                     <font>
+                        <Font name="Candara Bold Italic" size="30.5" />
+                     </font>
+                  </Text>
+                  <Text fill="#663399" layoutX="42.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Body Mass Index Calculator" textAlignment="CENTER" wrappingWidth="324.2082440853119">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="494.0" prefWidth="446.0" style="-fx-background-color: #663399;" GridPane.columnIndex="1">
+               <children>
+                  <Text fill="#b4e0e6" layoutX="52.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculate your Body Mass Index" wrappingWidth="356.1953125">
+                     <font>
+                        <Font name="Calibri Bold" size="26.5" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="Weight" layoutX="185.0" layoutY="69.0" onAction="#HandleButtonAction" promptText="Weight(Kilograms)" style="-fx-background-color: MistyRose;" />
+                  <TextField fx:id="Height" layoutX="185.0" layoutY="139.0" onAction="#HandleButtonAction" promptText="Height(Centimeters)" style="-fx-background-color: MistyRose;" />
+                  <Button fx:id="button" layoutX="220.0" layoutY="198.0" mnemonicParsing="false" onAction="#HandleButtonAction" prefHeight="48.0" prefWidth="119.0" text="Calculate" textFill="MAROON">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="ValueDisplay" layoutX="185.0" layoutY="279.0" style="-fx-background-color: MistyRose;" />
+                  <TextField fx:id="StatusDisplay" layoutX="185.0" layoutY="347.0" style="-fx-background-color: MistyRose;" />
+                  <Text fill="MINTCREAM" layoutX="16.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your weight">
+                     <font>
+                        <Font name="System Bold Italic" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="MINTCREAM" layoutX="14.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your height">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="MINTCREAM" layoutX="27.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your BMI Value" wrappingWidth="157.3623102158308">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="MINTCREAM" layoutX="95.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="28.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="reset" layoutX="220.0" layoutY="405.0" mnemonicParsing="false" onAction="#reset" prefHeight="45.0" prefWidth="119.0" text="Reset" textFill="MAROON">
+                     <font>
+                        <Font name="System Bold Italic" size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
